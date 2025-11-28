@@ -1,0 +1,69 @@
+/* ===========================================================
+   RESET BÀSIC
+   =========================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===========================================================
+   ESTILS GLOBALS
+   =========================================================== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #111;
+    padding: 20px;
+    color: #fff;
+}
+
+/* ------- CONTENIDOR PRINCIPAL ------- */
+.container {
+    background:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), 
+        url(assets/img/foto-back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    padding: 40px 30px;
+    border-radius: 20px;
+    max-width: 900px;
+    margin: 30px auto;
+
+    box-shadow: 0px 0px 30px rgba(250, 250, 250, 0.3);
+
+    /* Transició per hover (ja fet per tu) */
+    transition: transform 0.5s;
+}
+
+.container:hover {
+    transform: translateY(-7px);
+}
+
+/* ===========================================================
+   NAVEGACIÓ / MENÚ
+   =========================================================== */
+.nav, .menu-links {
+    display: flex;
+    margin: 30px 0 70px 0;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav a, .menu-links a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+    padding: 10px 50px;
+    transition: 0.3s;
+}
+
+.nav a:hover, .menu-links a:hover { 
+    background-image: url(assets/img/foto-back.jpg); 
+    border-radius: 8px; 
+    color: #fff;
+    padding: 12px 50px;
+    box-shadow: 4px 4px 10px rgba(250, 250, 250, 0.2);
+}
