@@ -267,3 +267,54 @@ input[type="range"]::-webkit-slider-thumb:hover {
     top: 2px;
     left: 2px;
 }
+
+
+/* ===========================================================
+   SELECT PERSONALITZAT
+   =========================================================== */
+select {
+    appearance: none;
+    background-color: #1f1e1e;
+    border: 1px solid #777;
+    padding-right: 40px;
+
+    /* Icona ▼ creada amb gradients */
+    background-image: 
+        linear-gradient(45deg, transparent 50%, #ce994f 50%),
+        linear-gradient(135deg, #ce994f 50%, transparent 50%);
+    background-position:
+        calc(100% - 20px) calc(1em + 3px),
+        calc(100% - 15px) calc(1em + 3px);
+    background-size: 5px 5px;
+    background-repeat: no-repeat;
+}
+
+
+/* ===========================================================
+   BOTONS
+   =========================================================== */
+.botons { 
+    margin-top: 20px; 
+    display: flex; 
+    gap: 15px; 
+}
+
+input[type="submit"], input[type="reset"], button {
+    cursor: pointer;
+    background: #ce994f;
+    letter-spacing: 1.5px;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+input[type="submit"]:hover, 
+input[type="reset"]:hover, 
+button:hover {
+    background: #357ab8;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+}
