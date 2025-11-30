@@ -44,32 +44,86 @@ body {
 /* ===========================================================
    NAVEGACIÓ / MENÚ
    =========================================================== */
-.nav, .menu-links {
+nav {
+    width: 100%;
     display: flex;
-    margin: 30px 0 70px 0;
-    font-size: 25px;
     align-items: center;
     justify-content: center;
+    margin: 25px 0 45px 0;
 }
 
-.nav a, .menu-links a {
-    text-decoration: none;
-    font-weight: 600;
-    color: #fff;
-    padding: 15px 20px;
-    margin-right: 60px;
+/* Checkbox ocult */
+#toggle-menuf {
+    display: none;
+}
+
+/* Icona hamburguesa */
+.hamburgerf {
+    display: none;
+    cursor: pointer;
+    font-size: 32px;
+    padding: 10px 14px;
+    border-radius: 8px;
     transition: 0.3s;
 }
 
-.nav a:hover, .menu-links a:hover { 
-    background-image: url(assets/img/foto-back.jpg); 
-    border-radius: 8px; 
-    color: #fff;
-    padding: 15px 20px;
-    box-shadow: 0px 0px 15px rgba(217, 205, 205, 0.656);
-    font-size: 26px;
+.hamburgerf:hover {
+    background-color: #222;
 }
 
+/* Links menú */
+.nav-linksf {
+    display: flex;
+    gap: 70px;
+}
+
+.nav-linksf a {
+    color: #fff;
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 15px 20px;
+    transition: 0.2s;
+}
+
+.nav-linksf a:hover {
+    font-size: 26px;
+    background:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), 
+        url(assets/img/foto-back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #ece9e6;
+}
+
+/* MENÚ MÒBIL */
+@media (max-width: 700px) {
+
+    .hamburgerf {
+        display: block;
+    }
+
+    .nav-linksf {
+        position: absolute;
+        top: 75px;
+        right: 20px;
+        background-color: #000000d0;
+        padding: 20px;
+        border-radius: 12px;
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        box-shadow: 0 0 20px #000;
+        transition: 0.4s;
+    }
+
+    /* Mostrar menú quan està activat */
+    #pagina-formulari:has(#toggle-menuf:checked) .nav-linksf {
+        display: flex;
+    }
+}
 
 
 
@@ -450,9 +504,7 @@ nav {
         display: flex;
     }
 
-    #pagina-formulari:has(#toggle-menu:checked) .nav-links {
-        display: flex;
-    }
+    
 }
 
 
