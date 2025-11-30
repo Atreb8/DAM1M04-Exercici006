@@ -326,6 +326,11 @@ button:hover {
 
 
 
+
+
+
+
+
 /* ===========================================================
    - - - - - - - - - - PART INTERACCIÓ - - - - - - -
    =========================================================== */
@@ -444,8 +449,11 @@ nav {
     #pagina-interaccio:has(#toggle-menu:checked) .nav-links {
         display: flex;
     }
-}
 
+    #pagina-formulari:has(#toggle-menu:checked) .nav-links {
+        display: flex;
+    }
+}
 
 
 
@@ -625,7 +633,7 @@ h1{
 
 /* Targeta */
 .flip-card {
-    width: 400px;       /* Mida controlada perquè pugui centrar-se bé */
+    width: 350px;       /* Mida controlada perquè pugui centrar-se bé */
     height: 250px;
     perspective: 1000px;
     position: relative; /* Important per al posicionament intern */
